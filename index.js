@@ -135,6 +135,16 @@ inquirer.prompt([
 `# ${title}
 ${licenseB}
 
+### Table of Contents
+**[Description.](#description)**</br>
+**[Installation Instructions.](#installation-instructions)**</br>
+**[Usage Information.](#usage-information)**</br>
+**[Contributions.](#contributions)**</br>
+**[Testing Instructions.](#testing-instructions)**</br>
+**[Questions.](#questions)**</br>
+**[Deployed Site.](#desployed-site)**</br>
+**[GitHub Repo.](#repository)**</br>
+
 ## Description
 ${description}
 
@@ -151,19 +161,21 @@ ${contrGuide}
 ${testInst}
 
 ## Questions
-If you have any questions, you can reach me at:
+If you have any questions, you can reach me at:</br>
+
 Github:
-- ${githubProf}
+- ${githubProf}</br>
+
 Email:
 - ${emailAdd}
 
-## Live Site: 
+## Deployed Site: 
 ${deployedUrl}
 
 ## Repository: 
 ${repoUrl}`;
 
-    fs.writeFile(`README1.md`, readmeText, (err) =>
+    fs.writeFile(`${title}.md`, readmeText, (err) =>
       err ? console.error(err) : console.log('Success!')
     );
 });
